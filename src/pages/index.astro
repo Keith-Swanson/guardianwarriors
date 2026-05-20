@@ -1,7 +1,6 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import GuardianWarriorsSite from '../components/GuardianWarriorsSite.jsx';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -9,64 +8,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-			main {
-				max-width: 960px;
-				margin: 0 auto;
-				padding: 2rem 1rem 4rem;
-			}
-			h1 {
-				font-size: clamp(2rem, 4vw, 3rem);
-				line-height: 1.15;
-				margin-bottom: 0.75rem;
-			}
-			.lead {
-				font-size: 1.1rem;
-				color: rgb(var(--gray-dark));
-				max-width: 65ch;
-			}
-			.grid {
-				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-				gap: 1rem;
-				margin-top: 2rem;
-			}
-			.card {
-				padding: 1rem;
-				border: 1px solid rgba(var(--gray), 0.35);
-				border-radius: 12px;
-				background: #fff;
-			}
-			.card h2 {
-				font-size: 1.15rem;
-				margin-bottom: 0.4rem;
-			}
-		</style>
 	</head>
 	<body>
-		<Header />
-		<main>
-			<h1>Security-first support for modern teams.</h1>
-			<p class="lead">
-				Guardian Warriors helps organizations reduce risk with clear policy, fast response, and practical
-				cyber hygiene training.
-			</p>
-
-			<div class="grid">
-				<section class="card">
-					<h2>Incident Readiness</h2>
-					<p>Build playbooks, run tabletop exercises, and shorten your response time.</p>
-				</section>
-				<section class="card">
-					<h2>Threat Awareness</h2>
-					<p>Stay ahead of phishing, credential attacks, and identity-based compromise.</p>
-				</section>
-				<section class="card">
-					<h2>Resilience Programs</h2>
-					<p>Move from reactive fixes to repeatable controls your team can sustain.</p>
-				</section>
-			</div>
-		</main>
-		<Footer />
+		<GuardianWarriorsSite client:load />
 	</body>
 </html>
