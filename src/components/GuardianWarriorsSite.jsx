@@ -16,6 +16,7 @@ import {
 	Sparkles,
 	Award,
 	HeartPulse,
+	Image as ImageIcon,
 } from 'lucide-react';
 
 const fadeUp = {
@@ -58,6 +59,48 @@ const Pill = ({ children }) => (
 	</span>
 );
 
+const FEATURE_IMAGES = [
+	{
+		src: '/blog-placeholder-about.jpg',
+		alt: 'Guardian Warriors mission-driven interior transformation showcase',
+		label: 'Mission Environment',
+	},
+	{
+		src: '/blog-placeholder-4.jpg',
+		alt: 'Veteran family support moment during a community event',
+		label: 'Family & Community',
+	},
+	{
+		src: '/blog-placeholder-5.jpg',
+		alt: 'Luxury hospitality style presentation for Hollywood for Heroes programming',
+		label: 'Hollywood for Heroes',
+	},
+];
+
+const ImagePanel = ({ src, alt, label }) => (
+	<motion.figure
+		variants={fadeUp}
+		initial="hidden"
+		whileInView="visible"
+		viewport={{ once: true, amount: 0.3 }}
+		transition={{ duration: 0.55 }}
+		className="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] shadow-2xl shadow-black/30"
+	>
+		<img
+			src={src}
+			alt={alt}
+			loading="lazy"
+			decoding="async"
+			className="h-64 w-full object-cover transition duration-500 group-hover:scale-105 md:h-72"
+		/>
+		<figcaption className="flex items-center gap-2 border-t border-white/10 px-4 py-3 text-xs uppercase tracking-[0.2em] text-cyan-100">
+			<ImageIcon className="h-4 w-4 text-amber-300" />
+			{label}
+		</figcaption>
+	</motion.figure>
+);
+
+
 export default function GuardianWarriorsSite() {
 	return (
 		<main className="gw-main min-h-screen w-full max-w-none bg-[#070911] text-slate-100">
@@ -75,6 +118,7 @@ export default function GuardianWarriorsSite() {
 						</div>
 					</a>
 					<div className="hidden items-center gap-7 text-sm text-slate-300 md:flex">
+						<a href="#visuals" className="hover:text-white">Visuals</a>
 						<a href="#mission" className="hover:text-white">Mission</a>
 						<a href="#hollywood" className="hover:text-white">Hollywood for Heroes</a>
 						<a href="#partners" className="hover:text-white">Partners</a>
@@ -158,6 +202,19 @@ export default function GuardianWarriorsSite() {
 					</motion.div>
 				</div>
 			</header>
+
+			<Section
+				id="visuals"
+				eyebrow="Upgraded Visuals"
+				title="A richer, image-forward experience aligned with mission and impact storytelling."
+				className="pt-8"
+			>
+				<div className="grid gap-6 lg:grid-cols-3">
+					{FEATURE_IMAGES.map((image) => (
+						<ImagePanel key={image.src} src={image.src} alt={image.alt} label={image.label} />
+					))}
+				</div>
+			</Section>
 
 			<Section
 				id="mission"
@@ -304,7 +361,7 @@ export default function GuardianWarriorsSite() {
 
 			<footer className="border-t border-white/10 px-6 py-10 md:px-12 lg:px-20">
 				<div className="mx-auto flex max-w-7xl flex-col gap-4 text-sm text-slate-400 md:flex-row md:items-center md:justify-between">
-					<p>© 2027 Guardian Warriors. All rights reserved.</p>
+					<p>© {new Date().getFullYear()} Guardian Warriors. All rights reserved.</p>
 					<p>Hollywood for Heroes · Luxury Impact Experience</p>
 				</div>
 			</footer>
