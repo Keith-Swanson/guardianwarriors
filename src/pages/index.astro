@@ -1,24 +1,100 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import GuardianWarriorsSite from '../components/GuardianWarriorsSite.jsx';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+const year = new Date().getFullYear();
 ---
 
-<!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style is:global>
-			/* Defensive override to ensure the landing page never inherits narrow blog container widths */
-			main.gw-main {
-				width: 100% !important;
-				max-width: none !important;
-				margin: 0 !important;
-				padding: 0 !important;
-			}
-		</style>
-	</head>
-	<body>
-		<GuardianWarriorsSite client:load />
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Guardian Warriors Foundation | Protecting Children, Supporting Families</title>
+    <meta
+      name="description"
+      content="Guardian Warriors Foundation is a nonprofit advancing child protection, family support, education, and advocacy programs."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="#top">Guardian Warriors</a>
+        <nav>
+          <a href="#mission">Mission</a>
+          <a href="#programs">Programs</a>
+          <a href="#impact">Impact</a>
+          <a href="#partners">Partners</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="kicker">Guardian Warriors Nonprofit Foundation</p>
+            <h1>Creating safer futures for children and families.</h1>
+            <p>
+              We unite community partners, advocates, and volunteers to deliver prevention education,
+              emergency support, and long-term healing services.
+            </p>
+            <a class="btn" href="#contact">Support the Mission</a>
+          </div>
+          <img src="/blog-placeholder-about.jpg" alt="Guardian Warriors community support" />
+        </div>
+      </section>
+
+      <section id="mission" class="section">
+        <div class="container">
+          <h2>Our Mission</h2>
+          <p>
+            Guardian Warriors Foundation protects vulnerable youth through trauma-informed care, practical
+            family support, and advocacy-driven community partnerships.
+          </p>
+        </div>
+      </section>
+
+      <section id="programs" class="section alt">
+        <div class="container cards">
+          <article><h3>Prevention Education</h3><p>School and neighborhood workshops that teach awareness and safety planning.</p></article>
+          <article><h3>Family Stabilization</h3><p>Emergency resources, referrals, and wraparound services for families in crisis.</p></article>
+          <article><h3>Mentorship & Healing</h3><p>Mentoring programs and restorative support helping children build resilience.</p></article>
+        </div>
+      </section>
+
+      <section id="impact" class="section">
+        <div class="container stats">
+          <div><strong>2,500+</strong><span>Families reached annually</span></div>
+          <div><strong>85%</strong><span>Program completion rate</span></div>
+          <div><strong>40+</strong><span>Partner organizations</span></div>
+        </div>
+      </section>
+
+      <section id="partners" class="section alt">
+        <div class="container hero-grid">
+          <img src="/blog-placeholder-1.jpg" alt="Volunteers serving at partner event" />
+          <div>
+            <h2>Community Partnerships</h2>
+            <p>
+              We collaborate with schools, first responders, social workers, and local businesses to create
+              a coordinated protection network for children.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container contact-card">
+          <h2>Get Involved</h2>
+          <p>Email: hello@guardianwarriors.org</p>
+          <p>Phone: (000) 000-0000</p>
+          <p>Together, we can protect and empower every child.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">© {year} Guardian Warriors Foundation. All rights reserved.</div>
+    </footer>
+  </body>
 </html>
