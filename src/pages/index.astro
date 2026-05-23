@@ -7,24 +7,22 @@ const year = new Date().getFullYear();
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Guardian Warriors Foundation | Protecting Children, Supporting Families</title>
+    <title>Guardian Warriors Foundation | Community Protection & Family Advocacy</title>
     <meta
       name="description"
-      content="Guardian Warriors Foundation is a nonprofit advancing child protection, family support, education, and advocacy programs."
+      content="Guardian Warriors Foundation advances child safety, family resilience, and community advocacy through education, outreach, and trauma-informed support."
     />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="stylesheet" href="/src/styles/global.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container nav-wrap">
         <a class="brand" href="#top">Guardian Warriors</a>
-        <nav aria-label="Primary">
-        <nav>
+        <nav aria-label="Primary navigation">
           <a href="#mission">Mission</a>
           <a href="#programs">Programs</a>
+          <a href="#stories">Stories</a>
           <a href="#impact">Impact</a>
-          <a href="#partners">Partners</a>
           <a href="#contact">Contact</a>
         </nav>
       </div>
@@ -32,67 +30,92 @@ const year = new Date().getFullYear();
 
     <main id="top">
       <section class="hero">
+        <div class="hero-overlay"></div>
         <div class="container hero-grid">
-          <div>
-            <p class="kicker">Guardian Warriors Nonprofit Foundation</p>
-            <h1>Creating safer futures for children and families.</h1>
+          <div class="hero-copy">
+            <p class="kicker">Guardian Warriors Foundation</p>
+            <h1>Protecting children. Strengthening families. Mobilizing communities.</h1>
             <p>
-              We unite community partners, advocates, and volunteers to deliver prevention education,
-              emergency support, and long-term healing services.
+              We help families navigate crisis, build long-term stability, and connect with compassionate
+              local partners who are committed to child safety.
             </p>
-            <a class="btn" href="#contact">Support the Mission</a>
+            <div class="hero-actions">
+              <a class="btn" href="#contact">Become a Supporter</a>
+              <a class="btn btn-outline" href="#programs">Explore Programs</a>
+            </div>
           </div>
-          <img src="/blog-placeholder-about.jpg" alt="Guardian Warriors community support" />
+          <img src="/blog-placeholder-about.jpg" alt="Guardian Warriors staff supporting families in the community" loading="eager" />
         </div>
       </section>
 
       <section id="mission" class="section">
-        <div class="container">
-          <h2>Our Mission</h2>
-          <p>
-            Guardian Warriors Foundation protects vulnerable youth through trauma-informed care, practical
-            family support, and advocacy-driven community partnerships.
-          </p>
+        <div class="container split">
+          <div>
+            <p class="kicker">Our Mission</p>
+            <h2>Safe homes and hopeful futures for every child.</h2>
+            <p>
+              Guardian Warriors exists to reduce harm, restore confidence, and equip caregivers with practical
+              tools. Our services combine prevention training, emergency assistance, and mentorship designed for
+              sustainable outcomes.
+            </p>
+          </div>
+          <img src="/blog-placeholder-2.jpg" alt="Community members collaborating around a table" loading="lazy" />
         </div>
       </section>
 
       <section id="programs" class="section alt">
-        <div class="container cards">
-          <article><h3>Prevention Education</h3><p>School and neighborhood workshops that teach awareness and safety planning.</p></article>
-          <article><h3>Family Stabilization</h3><p>Emergency resources, referrals, and wraparound services for families in crisis.</p></article>
-          <article><h3>Mentorship & Healing</h3><p>Mentoring programs and restorative support helping children build resilience.</p></article>
-        </div>
-      </section>
-
-      <section id="impact" class="section">
-        <div class="container stats">
-          <div><strong>2,500+</strong><span>Families reached annually</span></div>
-          <div><strong>85%</strong><span>Program completion rate</span></div>
-          <div><strong>40+</strong><span>Partner organizations</span></div>
-        </div>
-      </section>
-
-      <section id="partners" class="section alt">
-        <div class="container hero-grid">
-          <img src="/blog-placeholder-1.jpg" alt="Volunteers serving at partner event" />
-          <div>
-            <h2>Community Partnerships</h2>
-            <p>
-              We collaborate with schools, first responders, social workers, and local businesses to create
-              a coordinated protection network for children.
-            </p>
+        <div class="container">
+          <p class="kicker">What We Do</p>
+          <h2>Programs designed for real-world family needs.</h2>
+          <div class="cards">
+            <article>
+              <h3>Prevention Education</h3>
+              <p>Workshops for youth, schools, and caregivers focused on awareness, boundaries, and response planning.</p>
+            </article>
+            <article>
+              <h3>Crisis Stabilization</h3>
+              <p>Rapid referrals, safety planning, and direct support for families facing immediate challenges.</p>
+            </article>
+            <article>
+              <h3>Mentorship & Recovery</h3>
+              <p>Trauma-informed mentoring, parent support groups, and resilience-centered healing resources.</p>
+            </article>
           </div>
+        </div>
+      </section>
+
+      <section id="stories" class="section gallery-section">
+        <div class="container">
+          <p class="kicker">In the Community</p>
+          <h2>Driven by people, powered by partnership.</h2>
+          <div class="gallery">
+            <img src="/blog-placeholder-1.jpg" alt="Volunteers at community outreach event" loading="lazy" />
+            <img src="/blog-placeholder-3.jpg" alt="Mentorship activity with youth participants" loading="lazy" />
+            <img src="/blog-placeholder-4.jpg" alt="Family services and support session" loading="lazy" />
+            <img src="/blog-placeholder-5.jpg" alt="Guardian Warriors partner collaboration" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <section id="impact" class="section alt">
+        <div class="container stats">
+          <div><strong>2,500+</strong><span>Families reached each year</span></div>
+          <div><strong>40+</strong><span>Local and regional partners</span></div>
+          <div><strong>85%</strong><span>Program completion rate</span></div>
+          <div><strong>300+</strong><span>Volunteer advocates mobilized</span></div>
         </div>
       </section>
 
       <section id="contact" class="section">
         <div class="container contact-card">
-          <h2>Get Involved</h2>
-          <p>Email: contact@guardianwarriors.org</p>
-          <p>Phone: (813) 317-8655</p>
-          <p>Email: hello@guardianwarriors.org</p>
-          <p>Phone: (813) 317-8655</p>
-          <p>Together, we can protect and empower every child.</p>
+          <p class="kicker">Get Involved</p>
+          <h2>Join the Guardian Warriors network.</h2>
+          <p>Whether you donate, volunteer, or become a community partner, your action helps protect children and support families.</p>
+          <div class="contact-grid">
+            <p><strong>Email:</strong> hello@guardianwarriors.org</p>
+            <p><strong>Phone:</strong> (813) 317-8655</p>
+          </div>
+          <a class="btn" href="mailto:hello@guardianwarriors.org">Contact the Foundation</a>
         </div>
       </section>
     </main>
