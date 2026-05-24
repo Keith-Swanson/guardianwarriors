@@ -13,11 +13,19 @@ const year = new Date().getFullYear();
       content="Guardian Warriors Foundation advances child safety, family resilience, and community advocacy through education, outreach, and trauma-informed support."
     />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <meta property="og:image" content="/favicon.svg" />
+    <meta name="twitter:image" content="/favicon.svg" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <header class="site-header">
       <div class="container nav-wrap">
-        <a class="brand" href="#top">Guardian Warriors</a>
+        <a class="brand" href="#top" aria-label="Guardian Warriors homepage">
+          <img class="brand-mark" src="/brand-mark.svg" alt="" aria-hidden="true" />
+          <span>Guardian Warriors</span>
+        </a>
         <nav aria-label="Primary navigation">
           <a href="#mission">Mission</a>
           <a href="#programs">Programs</a>
@@ -28,13 +36,13 @@ const year = new Date().getFullYear();
       </div>
     </header>
 
-    <main id="top">
-      <section class="hero">
+    <main id="main-content">
+      <section id="top" class="hero" aria-labelledby="hero-title">
         <div class="hero-overlay"></div>
         <div class="container hero-grid">
           <div class="hero-copy">
             <p class="kicker">Guardian Warriors Foundation</p>
-            <h1>Protecting children. Strengthening families. Mobilizing communities.</h1>
+            <h1 id="hero-title">Protecting children. Strengthening families. Mobilizing communities.</h1>
             <p>
               We help families navigate crisis, build long-term stability, and connect with compassionate
               local partners who are committed to child safety.
