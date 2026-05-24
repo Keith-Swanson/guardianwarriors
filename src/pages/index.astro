@@ -1,23 +1,36 @@
 ---
 import '../styles/global.css';
 const year = new Date().getFullYear();
+const assetVersion = '2026-05-24';
+const canonicalUrl = 'https://guardianwarriors.org/';
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta name="theme-color" content="#08152a" />
     <title>Guardian Warriors Foundation | Community Protection & Family Advocacy</title>
     <meta
       name="description"
       content="Guardian Warriors Foundation advances child safety, family resilience, and community advocacy through education, outreach, and trauma-informed support."
     />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <meta property="og:image" content="https://guardianwarriors.org/favicon.svg" />
+    <meta name="twitter:image" content="https://guardianwarriors.org/favicon.svg" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <header class="site-header">
       <div class="container nav-wrap">
-        <a class="brand" href="#top">Guardian Warriors</a>
+        <a class="brand" href="#top" aria-label="Guardian Warriors homepage">
+          <img class="brand-mark" src={`/brand-mark.svg?v=${assetVersion}`} alt="" aria-hidden="true" />
+          <span>Guardian Warriors</span>
+        </a>
         <nav aria-label="Primary navigation">
           <a href="#mission">Mission</a>
           <a href="#programs">Programs</a>
@@ -28,13 +41,13 @@ const year = new Date().getFullYear();
       </div>
     </header>
 
-    <main id="top">
-      <section class="hero">
+    <main id="main-content">
+      <section id="top" class="hero" aria-labelledby="hero-title">
         <div class="hero-overlay"></div>
         <div class="container hero-grid">
           <div class="hero-copy">
             <p class="kicker">Guardian Warriors Foundation</p>
-            <h1>Protecting children. Strengthening families. Mobilizing communities.</h1>
+            <h1 id="hero-title">Protecting children. Strengthening families. Mobilizing communities.</h1>
             <p>
               We help families navigate crisis, build long-term stability, and connect with compassionate
               local partners who are committed to child safety.
@@ -44,7 +57,7 @@ const year = new Date().getFullYear();
               <a class="btn btn-outline" href="#programs">Explore Programs</a>
             </div>
           </div>
-          <img src="/blog-placeholder-about.jpg" alt="Guardian Warriors staff supporting families in the community" loading="eager" />
+          <img src={`/blog-placeholder-about.jpg?v=${assetVersion}`} alt="Guardian Warriors staff supporting families in the community" loading="eager" />
         </div>
       </section>
 
@@ -59,7 +72,7 @@ const year = new Date().getFullYear();
               sustainable outcomes.
             </p>
           </div>
-          <img src="/blog-placeholder-2.jpg" alt="Community members collaborating around a table" loading="lazy" />
+          <img src={`/blog-placeholder-2.jpg?v=${assetVersion}`} alt="Community members collaborating around a table" loading="lazy" />
         </div>
       </section>
 
@@ -89,10 +102,10 @@ const year = new Date().getFullYear();
           <p class="kicker">In the Community</p>
           <h2>Driven by people, powered by partnership.</h2>
           <div class="gallery">
-            <img src="/blog-placeholder-1.jpg" alt="Volunteers at community outreach event" loading="lazy" />
-            <img src="/blog-placeholder-3.jpg" alt="Mentorship activity with youth participants" loading="lazy" />
-            <img src="/blog-placeholder-4.jpg" alt="Family services and support session" loading="lazy" />
-            <img src="/blog-placeholder-5.jpg" alt="Guardian Warriors partner collaboration" loading="lazy" />
+            <img src={`/blog-placeholder-1.jpg?v=${assetVersion}`} alt="Volunteers at community outreach event" loading="lazy" />
+            <img src={`/blog-placeholder-3.jpg?v=${assetVersion}`} alt="Mentorship activity with youth participants" loading="lazy" />
+            <img src={`/blog-placeholder-4.jpg?v=${assetVersion}`} alt="Family services and support session" loading="lazy" />
+            <img src={`/blog-placeholder-5.jpg?v=${assetVersion}`} alt="Guardian Warriors partner collaboration" loading="lazy" />
           </div>
         </div>
       </section>
