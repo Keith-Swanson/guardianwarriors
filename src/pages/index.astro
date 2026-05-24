@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 const year = new Date().getFullYear();
+const assetVersion = '2026-05-24';
 ---
 
 <html lang="en">
@@ -12,10 +13,10 @@ const year = new Date().getFullYear();
       name="description"
       content="Guardian Warriors Foundation advances child safety, family resilience, and community advocacy through education, outreach, and trauma-informed support."
     />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/favicon.svg" />
-    <meta property="og:image" content="/favicon.svg" />
-    <meta name="twitter:image" content="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={`/favicon.svg?v=${assetVersion}`} />
+    <link rel="apple-touch-icon" href={`/favicon.svg?v=${assetVersion}`} />
+    <meta property="og:image" content={`/favicon.svg?v=${assetVersion}`} />
+    <meta name="twitter:image" content={`/favicon.svg?v=${assetVersion}`} />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -23,7 +24,7 @@ const year = new Date().getFullYear();
     <header class="site-header">
       <div class="container nav-wrap">
         <a class="brand" href="#top" aria-label="Guardian Warriors homepage">
-          <img class="brand-mark" src="/brand-mark.svg" alt="" aria-hidden="true" />
+          <img class="brand-mark" src={`/brand-mark.svg?v=${assetVersion}`} alt="" aria-hidden="true" />
           <span>Guardian Warriors</span>
         </a>
         <nav aria-label="Primary navigation">
@@ -52,7 +53,7 @@ const year = new Date().getFullYear();
               <a class="btn btn-outline" href="#programs">Explore Programs</a>
             </div>
           </div>
-          <img src="/blog-placeholder-about.jpg" alt="Guardian Warriors staff supporting families in the community" loading="eager" />
+          <img src={`/blog-placeholder-about.jpg?v=${assetVersion}`} alt="Guardian Warriors staff supporting families in the community" loading="eager" />
         </div>
       </section>
 
@@ -67,7 +68,7 @@ const year = new Date().getFullYear();
               sustainable outcomes.
             </p>
           </div>
-          <img src="/blog-placeholder-2.jpg" alt="Community members collaborating around a table" loading="lazy" />
+          <img src={`/blog-placeholder-2.jpg?v=${assetVersion}`} alt="Community members collaborating around a table" loading="lazy" />
         </div>
       </section>
 
@@ -97,10 +98,10 @@ const year = new Date().getFullYear();
           <p class="kicker">In the Community</p>
           <h2>Driven by people, powered by partnership.</h2>
           <div class="gallery">
-            <img src="/blog-placeholder-1.jpg" alt="Volunteers at community outreach event" loading="lazy" />
-            <img src="/blog-placeholder-3.jpg" alt="Mentorship activity with youth participants" loading="lazy" />
-            <img src="/blog-placeholder-4.jpg" alt="Family services and support session" loading="lazy" />
-            <img src="/blog-placeholder-5.jpg" alt="Guardian Warriors partner collaboration" loading="lazy" />
+            <img src={`/blog-placeholder-1.jpg?v=${assetVersion}`} alt="Volunteers at community outreach event" loading="lazy" />
+            <img src={`/blog-placeholder-3.jpg?v=${assetVersion}`} alt="Mentorship activity with youth participants" loading="lazy" />
+            <img src={`/blog-placeholder-4.jpg?v=${assetVersion}`} alt="Family services and support session" loading="lazy" />
+            <img src={`/blog-placeholder-5.jpg?v=${assetVersion}`} alt="Guardian Warriors partner collaboration" loading="lazy" />
           </div>
         </div>
       </section>
