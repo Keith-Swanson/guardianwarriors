@@ -13,6 +13,7 @@ Production website for Guardian Warriors Foundation built with Astro and deploye
 
 ## Local development
 ```bash
+nvm use
 npm install
 npm run dev
 ```
@@ -29,6 +30,12 @@ Build and deploy to Cloudflare Workers:
 npm run build:cf
 npm run deploy:cf
 ```
+
+## Updating website images
+- Put production images in `public/` and reference them with root-relative URLs (for example `/about.jpg`).
+- The homepage appends a short build/commit-based query string to image URLs to bust CDN/browser caches automatically after deploys.
+- Avoid storing unused duplicates in `src/assets/images/` unless they are imported directly by Astro components.
+
 
 ## Project layout
 - `src/pages/index.astro` – single-page marketing website.
