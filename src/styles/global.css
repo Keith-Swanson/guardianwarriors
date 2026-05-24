@@ -13,6 +13,25 @@
   box-sizing: border-box;
 }
 
+
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: -44px;
+  z-index: 20;
+  background: var(--gold);
+  color: #15140f;
+  font-weight: 700;
+  padding: 0.55rem 0.85rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 0.75rem;
+}
+
 body {
   margin: 0;
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
@@ -237,5 +256,14 @@ footer {
   nav {
     flex-wrap: wrap;
     gap: 0.7rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
